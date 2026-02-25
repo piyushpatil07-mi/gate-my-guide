@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate My Guide - Travel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== PAGE LOADER ========== -->
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- ========== NAVIGATION ========== -->
+<nav>
+    <div class="logo">Gate My Guide</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button onclick="toggleDarkMode()" class="dark-btn">🌙</button>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section id="home" class="hero reveal">
+    <div class="hero-content">
+        <h1>Explore The World With Us</h1>
+        <p>Your Trusted Travel Guide</p>
+        <button class="primary-btn">Book Now</button>
+    </div>
+</section>
+
+<!-- ========== FEATURED SLIDER ========== -->
+<section class="section reveal">
+    <h2>Featured Destinations</h2>
+
+    <div class="slider">
+        <div class="slides">
+            <img src="images/goa.jpg">
+            <img src="images/manali.jpg">
+            <img src="images/jaipur.jpg">
+            <img src="images/Kedarnath.jpg">
+        </div>
+    </div>
+</section>
+
+<!-- ========== DESTINATIONS ========== -->
+<section id="destinations" class="section reveal">
+    <h2>Popular Destinations</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="images/goa.jpg">
+            <h3>Goa</h3>
+            <p>Enjoy beautiful beaches and nightlife.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/manali.jpg">
+            <h3>Manali</h3>
+            <p>Experience snow mountains and adventure.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/jaipur.jpg">
+            <h3>Jaipur</h3>
+            <p>Discover royal palaces and culture.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PACKAGES ========== -->
+<section id="packages" class="section light-bg reveal">
+    <h2>Travel Packages</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Basic Package</h3>
+            <p>3 Days / 2 Nights</p>
+            <p class="price">₹5,999</p>
+        </div>
+
+        <div class="card">
+            <h3>Premium Package</h3>
+            <p>5 Days / 4 Nights</p>
+            <p class="price">₹12,999</p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== GALLERY ========== -->
+<section id="gallery" class="section reveal">
+    <h2>Travel Gallery</h2>
+    <div class="gallery">
+        <img src="images/goa.jpg">
+        <img src="images/manali.jpg">
+        <img src="images/jaipur.jpg">
+        <img src="images/Kedarnath.jpg">
+    </div>
+</section>
+
+<!-- ========== TIPS ========== -->
+<section id="tips" class="section light-bg reveal">
+    <h2>Travel Tips</h2>
+    <ul class="tips-list">
+        <li>Always carry valid ID proof.</li>
+        <li>Book tickets in advance.</li>
+        <li>Keep emergency contacts saved.</li>
+        <li>Pack light and smart.</li>
+    </ul>
+</section>
+
+<!-- ========== WHY CHOOSE US ========== -->
+<section class="section reveal">
+    <h2>Why Choose Us</h2>
+    <div class="features">
+        <div class="feature-box">
+            <h3>Affordable Packages</h3>
+            <p>Best prices with premium experience.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>24/7 Support</h3>
+            <p>We are always available for assistance.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Trusted Guides</h3>
+            <p>Experienced travel professionals.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== REVIEWS ========== -->
+<section class="section reviews light-bg reveal">
+    <h2>What Our Customers Say</h2>
+
+    <div class="review-container">
+        <div class="review-card">
+            <p>"Amazing experience! Everything was perfectly organized."</p>
+            <h4>- Piyush Narwade</h4>
+        </div>
+
+        <div class="review-card">
+            <p>"Best travel service I have ever used."</p>
+            <h4>- Snehal Patil</h4>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="section contact reveal">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+    <p>© 2026 Gate My Guide | Designed by Piyush</p>
+</footer>
+
+<!-- ========== WHATSAPP BUTTON ========== -->
+<a href="https://wa.me/919999999999" class="whatsapp-btn" target="_blank">💬</a>
+
+<!-- ========== SCRIPTS ========== -->
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+
+/* Scroll Reveal */
+window.addEventListener("scroll", function() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach(section => {
+        const windowHeight = window.innerHeight;
+        const revealTop = section.getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (revealTop < windowHeight - revealPoint) {
+            section.classList.add("active");
+        }
+    });
+});
+
+/* Page Loader */
+window.onload = function() {
+    document.getElementById("loader").style.display = "none";
+};
+</script>
+
+</body>
+</html>
